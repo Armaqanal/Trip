@@ -30,7 +30,7 @@ with db.Connect() as cursor:
         balance = random.randint(1, 10)
         values.append([user_id, type_ticket, balance])  # [[()]]
 
-    cursor.executemany(q.INSERT_TICKER, values)
+    cursor.executemany(q.INSERT_TICKET, values)
 
     values = []
     for _ in range(trip_qty):
